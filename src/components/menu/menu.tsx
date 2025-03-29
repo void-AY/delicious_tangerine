@@ -56,8 +56,8 @@ function Menu() {
         </div>
       </div>
       {selectedSlide && (
-        <div className={`${styles.popupWraper} ${isPopupOpen ? styles.open : ''}`}>
-          <div className={`${styles.popup} ${isPopupOpen ? styles.open : ''}`}>
+        <div className={`${styles.popupWraper} ${isPopupOpen ? styles.open : ''}`} onClick={closePopup}>
+          <div className={`${styles.popup} ${isPopupOpen ? styles.open : ''}`} onClick={(e) => e.stopPropagation()}>
             <div className={styles.buttonClose}>
               <button onClick={closePopup}>
                 <CloseOutlined style={{ fontSize: '20px', color: '#FFCD88' }} />

@@ -41,8 +41,8 @@ function Header() {
         </nav>
       </header>
       {menuVisible && (
-        <div className={`${styles.menuContainer} ${isMenuOpen ? styles.open : ''}`}>
-          <div className={`${styles.menu} ${isMenuOpen ? styles.open : ''}`}>
+        <div className={`${styles.menuContainer} ${isMenuOpen ? styles.open : ''}`} onClick={closeMenu}>
+          <div className={`${styles.menu} ${isMenuOpen ? styles.open : ''}`} onClick={(e) => e.stopPropagation()}>
             <div className={styles.menuButtonClose}>
               <button onClick={closeMenu}>
                 <CloseOutlined style={{ fontSize: '30px', color: '#FFCD88' }} />
