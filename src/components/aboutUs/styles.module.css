@@ -1,0 +1,59 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.containerText {
+    display: flex;
+    width: 100%;
+    font-size: 24px;
+}
+
+.containerImg {
+    display: flex;
+    place-items: end;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 10px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.8);
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .containerText {
+        font-size: 26px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .containerText {
+        font-size: 30px;
+    }
+}
+
+
+@media (min-width: 1444px) {
+    .containerText {
+        font-size: 32px;
+    }
+}
