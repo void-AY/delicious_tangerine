@@ -144,17 +144,6 @@
     }
 }
 
-@media (max-height: 768px) {
-    .popup {
-        width: 60%!important;
-        max-width: none;
-    }
-
-    .popupMain {
-        flex-direction: row;
-    }
-}
-
 @media (min-width: 480px) {
     .popup {
         width: 70%;
@@ -177,6 +166,15 @@
         font-size: 20px;
     }
 
+    @media (max-height: 768px) {
+        .popup {
+            width: 60%!important;
+            max-width: none;
+        }
+        .popupMain {
+            flex-direction: row;
+        }
+    }
 }
 
 @media (min-width: 1024px) {

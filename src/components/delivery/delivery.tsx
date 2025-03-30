@@ -1,8 +1,22 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './styles.module.css';
+import { CheckOutlined } from '@ant-design/icons';
 
 function Delivery() {
   const [openInfoPopup, setOpenInfoPopup] = useState(false)
+
+  useEffect(() => {
+    if (openInfoPopup) {
+      const timer = setTimeout(() => {
+        setOpenInfoPopup(false);
+      }, 3000);
+      return () => clearTimeout(timer)
+    }
+  }, [openInfoPopup])
+
+  const handleOpenInfo = () => {
+    setOpenInfoPopup(true);
+  }
 
   return (
     <>
@@ -13,7 +27,7 @@ function Delivery() {
         </div>
         <div className={styles.containerForm}>
           <h1>Заполните поля:</h1>
-          <form action={() => setOpenInfoPopup(true)}>
+          <form action={handleOpenInfo}>
             <input required type="text" placeholder='Имя'/>
             <input required type="tel" placeholder='Номер телефона'/>
             <input required type='text' placeholder='Адрес'/>
@@ -25,7 +39,7 @@ function Delivery() {
       {openInfoPopup && 
       <div className={styles.infoWrapper}>
         <div className={styles.infoPopup}>
-          Заказ успешно создан
+          Заказ успешно создан, ожидайте звонка {<CheckOutlined />}
         </div>
       </div>}
     </>
