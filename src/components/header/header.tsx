@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { CloseOutlined, MenuOutlined } from '@ant-design/icons';
 import styles from './styles.module.css';
 import logo from '../../assets/logo.png';
