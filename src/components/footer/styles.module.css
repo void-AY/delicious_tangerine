@@ -3,7 +3,7 @@
     flex-direction: column;
     gap: 20px;
     background-color: #242B1D;
-    color: #12100E;
+    color: #c6805a9a;
     margin-top: 40px;
     padding: 10px 40px;
     width: 100%;
@@ -22,7 +22,7 @@
 
     a {
         font-size: 20px;
-        color: #12100E;
+        color: #c6805a9a;
         text-decoration: none;
         font-size: 16px !important;
     }
@@ -34,7 +34,7 @@
     gap: 5px;
     p {
         text-align: end;
-        color: #12100E;
+        color: #c6805a9a;
     }
 }
 
